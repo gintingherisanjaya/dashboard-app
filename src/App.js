@@ -9,7 +9,8 @@ const urls = [
   'https://mims-foss.holding-perkebunan.com/',
   'https://www.instagram.com/ptpn4_regional2/',
   'https://ant.design/components/icon',
-  'https://www.wikipedia.org/'
+  'https://www.wikipedia.org/',
+  'https://id.pinterest.com/'
 ]
 
 function App() {
@@ -19,15 +20,7 @@ function App() {
 
   return (
     <Layout className="full-screen-layout">
-      <Header
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-        className='.ant-layout-header'
-      >
-        
-      </Header>
+      <Header style={{ display: 'flex', alignItems: 'center', }} > </Header>
         <Layout style={{ margin: '10px', paddingTop: '20px' }} >
           <Content
             style={{
@@ -45,6 +38,7 @@ function App() {
                 </Col>
               ) ) }
             </Row>
+            
           </Content>
         </Layout>
     </Layout>

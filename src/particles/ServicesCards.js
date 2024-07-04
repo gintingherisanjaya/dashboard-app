@@ -31,7 +31,7 @@ export default function ServicesCards({ url }) {
         <img
             alt="example"
             src={data?.image.url}
-            style={{ width: '80px', height: '80px', margin: '0 auto' }}
+            style={{ width: '80px', height: '80px', margin: '10px auto' }}
         />
     }
     actions={[
@@ -41,7 +41,7 @@ export default function ServicesCards({ url }) {
     <Meta
       avatar={<Avatar src={data?.logo.url} />}
       title={data?.title}
-      description={<span style={{ fontSize: '9px' }}>{data?.description.slice(0, 80).concat('...')}</span>}
+      description={<span style={{ fontSize: '9px' }}>{data?.description.slice(0, 100).concat('...')}</span>}
     />
   </Card>
   )
