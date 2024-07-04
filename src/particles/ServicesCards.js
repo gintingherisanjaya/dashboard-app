@@ -48,7 +48,7 @@ export default function ServicesCards({ url }) {
     <Meta
       avatar={<Avatar src={data?.logo?.url ? data?.logo?.url : defaultImage.url } />}
       title={data?.title ? data?.title : 'Not Available'}
-      description={<span style={{ fontSize: '9px', color: 'black' }}>{data?.description?.slice(0, 100).concat('...')}</span>}
+      description={<span style={{ fontSize: '9px', color: 'black' }}>{data?.description}</span>}
     />
   </Card>
   )
