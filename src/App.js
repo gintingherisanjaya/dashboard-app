@@ -5,12 +5,33 @@ import ServicesCards from './particles/ServicesCards'
 
 const { Header, Content} = Layout;
 const urls = [
-  'https://www.ptpn4apps.id/ptpn4_teh/public/',
-  'https://mims-foss.holding-perkebunan.com/',
-  'https://www.instagram.com/ptpn4_regional2/',
-  'https://ant.design/components/icon',
-  'https://www.wikipedia.org/',
-  'https://id.pinterest.com/'
+  {
+    url: 'https://www.ptpn4apps.id/ptpn4_teh/public/',
+    src: '/img/teh.png',
+    style: {
+      width: '100%',
+      height: 'auto',
+    }
+  }, {
+    url: 'https://mims-foss.holding-perkebunan.com/',
+    src: '/img/mims.png',
+    style: {
+      width: '100%',
+      height: 'auto',
+    }
+  }, {
+    url: 'https://www.instagram.com/ptpn4_regional2/',
+  }, {
+    url: 'https://www.pinterest.com/',
+  }, {
+    url: 'https://ant.design/docs/spec/introduce',
+  }, {
+    url: 'https://www.youtube.com/',
+  }, {
+    url: 'https://www.wikipedia.org/'
+  }, {
+    url: 'https://www.ptpn4apps.id:8080/doctrace/pks'
+  }
 ]
 
 function App() {
@@ -19,7 +40,7 @@ function App() {
   } = theme.useToken();
 
   return (
-    <Layout className="full-screen-layout">
+    <Layout>
       <Header style={{ display: 'flex', alignItems: 'center', }} > </Header>
         <Layout style={{ margin: '10px', paddingTop: '20px' }} >
           <Content
@@ -38,7 +59,7 @@ function App() {
                 </Col>
               ) ) }
             </Row>
-            
+
           </Content>
         </Layout>
     </Layout>
