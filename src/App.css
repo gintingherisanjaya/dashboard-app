@@ -34,6 +34,15 @@
   transition: opacity 500ms, transform 500ms;
 }
 
+.card-image {
+  transition: transform 0.3s ease;
+}
+
+.card-image:hover {
+  transform: scale(0.95);
+}
+
+
 /* .ant-layout-header {
   position: fixed;
   width: 100%;

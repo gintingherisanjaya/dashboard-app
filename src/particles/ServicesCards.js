@@ -34,6 +34,7 @@ export default function ServicesCards({ url }) {
         flexDirection: 'column',
         justifyContent: 'space-between',
     }}
+    className="card-image"
     cover={
         <img
             alt="example"
