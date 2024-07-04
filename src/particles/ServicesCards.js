@@ -18,7 +18,6 @@ export default function ServicesCards({ url }) {
     useEffect(() => {
         axios.get(`https://api.microlink.io/?url=${url.url}`).then(response => {
             setData(response.data.data)
-            console.log(response.data.data)
         }).catch(error => {
             console.error('axios@ServicesCards.error : ', error.message)
             console.error('error.description : ', error)
@@ -49,7 +48,7 @@ export default function ServicesCards({ url }) {
     <Meta
       avatar={<Avatar src={data?.logo?.url ? data?.logo?.url : defaultImage.url } />}
       title={data?.title ? data?.title : 'Not Available'}
-      description={<span style={{ fontSize: '9px' }}>{data?.description?.slice(0, 100).concat('...')}</span>}
+      description={<span style={{ fontSize: '9px', color: 'black' }}>{data?.description?.slice(0, 100).concat('...')}</span>}
     />
   </Card>
   )

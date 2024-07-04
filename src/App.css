@@ -2,9 +2,9 @@
   height: 100vh;
 }
 
-.ant-layout-header {
+/* .ant-layout-header {
   position: fixed;
   width: 100%;
   z-index: 1000;
   background: linear-gradient(to right, green, yellow, orange);
-}
+} */

@@ -36,31 +36,29 @@ const urls = [
 
 function App() {
   const {
-    token: { colorBgContainer, borderRadiusLG },
+    token: { borderRadiusLG },
   } = theme.useToken();
 
   return (
     <Layout>
-      <Header style={{ display: 'flex', alignItems: 'center', }} > </Header>
-        <Layout style={{ margin: '10px', paddingTop: '20px' }} >
-          <Content
-            style={{
-              padding: 10,
-              margin: 40,
-              minHeight: 280,
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
-            }}
-          >
-            <Row gutter={[24, 24]}>
-              { urls.map(url => (
-                <Col xs={24} sm={24} md={8} lg={6} xl={6}>
-                  <ServicesCards url={url} />
-                </Col>
-              ) ) }
-            </Row>
-
-          </Content>
+      {/* <Header style={{ display: 'flex', alignItems: 'center', }} > </Header> */}
+        <Layout style={{ margin: '0px', paddingTop: '20px', background: 'linear-gradient(to right, green, yellow, orange)' }} >
+            <Content
+              style={{
+                margin: 10,
+                minHeight: 280,
+                // background: 'linear-gradient(to left, green, yellow, orange)',
+                borderRadius: borderRadiusLG,
+              }}
+            >
+              <Row gutter={[24, 24]}>
+                { urls.map((url, index) => (
+                  <Col xs={24} sm={24} md={8} lg={6} xl={6} key={index} >
+                    <ServicesCards url={url} />
+                  </Col>
+                ) ) }
+              </Row>
+            </Content>
         </Layout>
     </Layout>
   );
