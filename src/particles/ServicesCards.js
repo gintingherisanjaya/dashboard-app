@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { LogoutOutlined } from '@ant-design/icons';
-import { Avatar, Card, Button } from 'antd';
+import { Avatar, Card, Button, Modal } from 'antd';
 import axios from 'axios'
 
 const { Meta } = Card;
@@ -14,6 +14,7 @@ const defaultImage = {
 
 export default function ServicesCards({ url }) {
     const [data, setData] = useState(null)
+    const [showDescription, setShowDescription] = useState(false)
 
     useEffect(() => {
         axios.get(`https://api.microlink.io/?url=${url.url}`).then(response => {
@@ -44,14 +45,18 @@ export default function ServicesCards({ url }) {
     }
     actions={[
       <Button style={{ width: '90%' }} type='primary' onClick={() => window.location.href = url.url } > Go to page<LogoutOutlined key="out" /> </Button>,
-      <Button style={{ width: '90%', backgroundColor: 'gray', color: 'white' }} > About </Button>
+      <Button style={{ width: '90%', backgroundColor: 'gray', color: 'white' }} onClick={() => setShowDescription(true) } > About </Button>
     ]}
   >
     <Meta
       avatar={<Avatar src={data?.logo?.url ? data?.logo?.url : defaultImage.url } />}
       title={data?.title ? data?.title : 'Not Available'}
-      description={<span style={{ fontSize: '9px', color: 'black' }}>{data?.description}</span>}
+      description={<span style={{ fontSize: '9px', color: 'black' }}>{url.description ? url.description.slice(0, 200) : data?.description?.slice(0, 200)}</span>}
     />
+      <Modal open={showDescription} onOk={() => setShowDescription(false) } onCancel={() => setShowDescription(false)}>
+        {url.description ? url.description : data?.description}
+      </Modal>
+
   </Card>
   )
 }

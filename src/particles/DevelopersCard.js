@@ -2,6 +2,9 @@ import React from 'react'
 import { Card } from 'antd'
 
 const { Meta } = Card;
+const defaultImage = {
+  src: '/img/face.png'
+}
 
 export default function DevelopersCard({data}) {
   return (
@@ -13,13 +16,12 @@ export default function DevelopersCard({data}) {
         flexDirection: 'column',
         justifyContent: 'space-between',
     }}    
-    cover={ <img alt="example" src={data?.src } style={{ borderRadius: '50%', width: '200px', height: '200px', margin: '10px auto' }}  /> }
+    cover={ <img alt="example" src={data.src ? data.src : defaultImage.src } style={{ borderRadius: '50%', width: '200px', height: '200px', margin: '10px auto' }}  /> }
     >
         <Meta
         title={data?.name}
         description={<span style={{ fontSize: '9px', color: 'black' }}>{data?.description}</span>}
         />
-
     </Card>
   )
 }

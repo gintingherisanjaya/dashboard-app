@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Layout, Menu, Drawer, Button } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
-import './AppHeader.css'; // Jika Anda ingin menambahkan CSS kustom
+import './AppHeader.css';
 import { useNavigate } from 'react-router-dom'
 
 const { Header } = Layout;
@@ -22,7 +22,7 @@ const AppHeader = () => {
     <>
       <Header className="header">
         <div className="logo">
-          <img src="/img/doctrace.png" alt="Company Logo" />
+          <img src="/img/ptpn4.png" alt="Company Logo" />
         </div>
         <div className="title">Daftar Aplikasi TI</div>
         <Button type="text" onClick={showDrawer} className="menu-button">

@@ -5,13 +5,12 @@ import DevelopersCard from './../particles/DevelopersCard'
 const developers = [
     {
         name: 'John',
-        src: '/img/teh.png',
+        description: 'Saya adalah database administrator',
+        src: null
     }, {
         name: 'Doe',
-        src: '/img/mims.png',
     }, {
         name: 'Saturn',
-        src: '/img/doctrace.png',
     }
   ]
   
