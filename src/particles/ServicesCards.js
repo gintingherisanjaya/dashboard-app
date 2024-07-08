@@ -44,6 +44,7 @@ export default function ServicesCards({ url }) {
     }
     actions={[
       <Button style={{ width: '90%' }} type='primary' onClick={() => window.location.href = url.url } > Go to page<LogoutOutlined key="out" /> </Button>,
+      <Button style={{ width: '90%', backgroundColor: 'gray', color: 'white' }} > About </Button>
     ]}
   >
     <Meta
